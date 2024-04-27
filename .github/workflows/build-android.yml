@@ -36,11 +36,11 @@ jobs:
       - name: Install Node modules
         run: yarn
 
-      # - name: Cache Gradle Wrapper
-      #   uses: actions/cache@v2
-      #   with:
-      #     path: ~/.gradle/wrapper
-      #     key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
+      - name: Cache Gradle Wrapper
+        uses: actions/cache@v2
+        with:
+          path: ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
 
       # - name: Cache Gradle Dependencies
       #   uses: actions/cache@v2
