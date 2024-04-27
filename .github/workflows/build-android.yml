@@ -64,6 +64,12 @@ jobs:
         run: |
           cd android && ./gradlew bundle --no-daemon
       - run: pwd
+      # Upload to Artifact
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Timely.aab
+          path: ${{steps.sign_app.outputs.signedReleaseFile}}
       # - name: Sign app APK
       #   uses: r0adkll/sign-android-release@v1
       #   id: sign_app
