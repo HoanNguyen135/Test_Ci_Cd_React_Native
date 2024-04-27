@@ -40,8 +40,6 @@ jobs:
     - name: Jest coverage report
       uses: ArtiomTr/jest-coverage-report-action@v2.0.6
       with:
-        coverage-file: ./jest-report.json
-        base-coverage-file: ./jest-report.json
         github-token: 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
         threshold: 90
         annotations: coverage
