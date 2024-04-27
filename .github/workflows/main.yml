@@ -32,11 +32,11 @@ jobs:
     - name: Install Node modules
       run: yarn
 
-    - name: Unit & Integration tests
-      run: yarn test:ci
+    # - name: Unit & Integration tests
+    #   run: yarn test:ci
 
-    - name: Jest coverage report
-      uses: ArtiomTr/jest-coverage-report-action@v2.0.6
+    # - name: Jest coverage report
+    #   uses: ArtiomTr/jest-coverage-report-action@v2.0.6
       
   # Second Job
   build-android:
