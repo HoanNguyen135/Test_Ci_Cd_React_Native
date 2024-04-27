@@ -54,6 +54,11 @@ jobs:
         run: cd android && chmod +x ./gradlew
         # Build Command
 
+      - name: set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+
       - name: Build Android ${{inputs.environment == 'release' && 'Release' || 'Debug'}}
         run: |
           cd android && ./gradlew bundle --no-daemon
