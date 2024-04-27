@@ -12,8 +12,8 @@ on:
         type: boolean
         description: Publish to Appcenter
     secrets:
-      APPCENTER_TOKEN_ANDROID:
-        required: true
+      # APPCENTER_TOKEN_ANDROID:
+      #   required: true
       ANDROID_KEYSTORE:
         required: true
       ANDROID_KEY_ALIAS:
