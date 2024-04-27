@@ -32,7 +32,7 @@ jobs:
       run: yarn
 
     - name: Unit & Integration tests
-      run: yarn test
+      run: yarn test:ci
 
     - name: Jest coverage report
       uses: ArtiomTr/jest-coverage-report-action@v2
