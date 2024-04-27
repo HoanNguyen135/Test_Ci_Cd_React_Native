@@ -26,11 +26,9 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: yarn
-  
-    - name: Install Node modules
-      run: yarn
+        cache: 'npm'  
+    # - name: Install Node modules
+    #   run: yarn
 
     # - name: Unit & Integration tests
     #   run: yarn test:ci
