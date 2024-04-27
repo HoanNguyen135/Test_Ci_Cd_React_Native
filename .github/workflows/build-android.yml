@@ -62,14 +62,14 @@ jobs:
 
       - name: Build Android ${{inputs.environment == 'release' && 'Release' || 'Debug'}}
         run: |
-          cd android && ./gradlew bundle --no-daemon
+           cd android && ./gradlew bundle${{inputs.environment == 'release' && 'Release' || 'Debug'}} --no-daemon
       - run: pwd
       # Upload to Artifact
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: Timely.aab
-          path: ${{steps.sign_app.outputs.signedReleaseFile}}
+          name: App.aab
+          path: android/app/build/outputs/bundle/release
       # - name: Sign app APK
       #   uses: r0adkll/sign-android-release@v1
       #   id: sign_app
