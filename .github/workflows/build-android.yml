@@ -42,22 +42,22 @@ jobs:
           path: ~/.gradle/wrapper
           key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
 
-      # - name: Cache Gradle Dependencies
-      #   uses: actions/cache@v2
-      #   with:
-      #     path: ~/.gradle/caches
-      #     key: ${{ runner.os }}-gradle-caches-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-gradle-caches-
+      - name: Cache Gradle Dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.gradle/caches
+          key: ${{ runner.os }}-gradle-caches-${{ hashFiles('gradle/wrapper/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-caches-
 
-      # - name: Make Gradlew Executable
-      #   run: cd android && chmod +x ./gradlew
-      #   # Build Command
+      - name: Make Gradlew Executable
+        run: cd android && chmod +x ./gradlew
+        # Build Command
 
-      # - name: Build Android ${{inputs.environment == 'release' && 'Release' || 'Debug'}}
-      #   run: |
-      #     cd android && ./gradlew bundle${{inputs.environment == 'release' && 'Release' || 'Debug'}} --no-daemon
-      # - run: pwd
+      - name: Build Android ${{inputs.environment == 'release' && 'Release' || 'Debug'}}
+        run: |
+          cd android && ./gradlew bundle${{inputs.environment == 'release' && 'Release' || 'Debug'}} --no-daemon
+      - run: pwd
       # - name: Sign app APK
       #   uses: r0adkll/sign-android-release@v1
       #   id: sign_app
