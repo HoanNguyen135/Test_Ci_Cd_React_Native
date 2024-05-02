@@ -101,11 +101,11 @@ jobs:
       - name: Upload artifact to App Center
         uses: wzieba/AppCenter-Github-Action@v1
         with:
-          appName: paramsinghvc/Timely
+          appName: hoannguyen13520/AppCenterTestCiCd
           token: ${{secrets.APPCENTER_TOKEN_ANDROID}}
           group: Testers
           file: android/app-release.aab
-          notifyTesters: true
+          notifyTesters: false
           debug: false
 
       # # Upload to Artifact
