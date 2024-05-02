@@ -11,15 +11,15 @@ on:
         required: false
         type: boolean
         description: Publish to Appcenter
-    secrets:
+    # secrets:
       # APPCENTER_TOKEN_ANDROID:
       #   required: true
-      ANDROID_KEYSTORE:
-        required: true
-      ANDROID_KEY_ALIAS:
-        required: true
-      ANDROID_KEYSTORE_PASSWORD:
-        required: true
+      # ANDROID_KEYSTORE:
+      #   required: true
+      # ANDROID_KEY_ALIAS:
+      #   required: true
+      # ANDROID_KEYSTORE_PASSWORD:
+      #   required: true
 
 jobs:
   build-android:
@@ -75,9 +75,12 @@ jobs:
         id: sign_app
         with:
           releaseDirectory: android/app/build/outputs/bundle/release
-          signingKeyBase64: ${{ secrets.ANDROID_KEYSTORE }}
-          alias: ${{ secrets.ANDROID_KEY_ALIAS }}
-          keyStorePassword: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          signingKeyBase64: 'my-release-key.keystore'
+          alias: 'my-key-alias'
+          keyStorePassword: 'Electriclove135.'
+          # signingKeyBase64: ${{ secrets.ANDROID_KEYSTORE }}
+          # alias: ${{ secrets.ANDROID_KEY_ALIAS }}
+          # keyStorePassword: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
           # keyPassword: ${{ secrets.KEY_PASSWORD }}
           
       # Upload to Artifact
