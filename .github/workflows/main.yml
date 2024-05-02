@@ -37,12 +37,13 @@ jobs:
     #   uses: ArtiomTr/jest-coverage-report-action@v2.0.6
       
   #Second Job
-  build-android:
-    needs: install-and-test
-    uses: ./.github/workflows/build-android.yml
-    with:
-      environment: release
-    secrets: inherit
+  
+  # build-android:
+  #   needs: install-and-test
+  #   uses: ./.github/workflows/build-android.yml
+  #   with:
+  #     environment: release
+  #   secrets: inherit
 
   # Third Job
   build-ios:
