@@ -64,12 +64,6 @@ jobs:
         run: |
            cd android && ./gradlew bundle${{inputs.environment == 'release' && 'Release' || 'Debug'}} --no-daemon
       - run: pwd
-      # # Upload to Artifact
-      # - name: Upload Artifact
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: App.aab
-      #     path: android/app/build/outputs/bundle/release
       - name: Sign app APK
         uses: r0adkll/sign-android-release@v1
         id: sign_app
@@ -95,7 +89,7 @@ jobs:
 
       - uses: actions/download-artifact@v3
         with:
-          name: app-release.aab
+          name: Timely.aab
           path: "android/"
 
       - name: set up JDK 21
