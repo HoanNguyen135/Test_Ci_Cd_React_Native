@@ -2,9 +2,9 @@ name: Pull Or Push To Branch Main
 
 on:
   push:
-    branches: [ "main1" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "main1" ]
+    branches: [ "main" ]
 
 jobs:
   # First Job
