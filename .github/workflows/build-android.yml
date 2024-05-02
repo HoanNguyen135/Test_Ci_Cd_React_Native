@@ -95,8 +95,8 @@ jobs:
 
       - uses: actions/download-artifact@v3
         with:
-          name: Timely.aab
-          path: android/app/build/outputs/bundle/release
+          name: app-release.aab
+          path: "android/"
 
       - name: set up JDK 21
         uses: actions/setup-java@v4
@@ -110,7 +110,7 @@ jobs:
           appName: paramsinghvc/Timely
           token: ${{secrets.APPCENTER_TOKEN_ANDROID}}
           group: Testers
-          file:  android/app/build/outputs/bundle/release/Timely.aab
+          file: android/app-release.aab
           notifyTesters: true
           debug: false
 
