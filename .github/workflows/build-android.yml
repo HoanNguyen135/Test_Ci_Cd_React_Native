@@ -104,12 +104,12 @@ jobs:
           distribution: 'zulu'
           java-version: '21'
 
-      - name: Upload artifact to App Center vip
+      - name: Upload artifact to App Center
         uses: wzieba/AppCenter-Github-Action@v1
         with:
           appName: paramsinghvc/Timely
           token: ${{secrets.APPCENTER_TOKEN_ANDROID}}
-          group: UKInternal
+          group: Testers
           file: android/app-release.aab
           notifyTesters: true
           debug: false
