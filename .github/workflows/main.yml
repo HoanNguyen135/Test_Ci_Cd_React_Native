@@ -47,7 +47,7 @@ jobs:
   # Third Job
   build-ios:
     needs: install-and-test
-    uses: ./.github/workflows/ios-build.yml
+    uses: ./.github/workflows/build-ios.yml
     with:
       environment: release
     secrets: inherit
