@@ -11,15 +11,15 @@ on:
         required: false
         type: boolean
         description: Publish to Appcenter
-    # secrets:
-    #   APPCENTER_TOKEN_ANDROID:
-    #     required: true
-    #   ANDROID_KEYSTORE:
-    #     required: true
-    #   ANDROID_KEY_ALIAS:
-    #     required: true
-    #   ANDROID_KEYSTORE_PASSWORD:
-    #     required: true
+    secrets:
+      # APPCENTER_TOKEN_ANDROID:
+      #   required: true
+      ANDROID_KEYSTORE:
+        required: true
+      ANDROID_KEY_ALIAS:
+        required: true
+      ANDROID_KEYSTORE_PASSWORD:
+        required: true
 
 jobs:
   build-android:
@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Use Node.js 18
+      - name: Use Node.js 18 ${{ secrets.ANDROID_KEYSTORE }}
         uses: actions/setup-node@v3
         with:
           node-version: 18
