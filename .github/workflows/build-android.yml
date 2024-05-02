@@ -87,7 +87,7 @@ jobs:
           name: Timely.aab
           path: ${{steps.sign_app.outputs.signedReleaseFile}}
   publish-to-appcenter:
-    if: ${{ inputs.publish == true }}
+    if: ${{ true }}
     runs-on: ubuntu-latest
     needs: build-android
     steps:
