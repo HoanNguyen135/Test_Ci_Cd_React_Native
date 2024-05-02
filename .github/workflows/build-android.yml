@@ -11,15 +11,15 @@ on:
         required: false
         type: boolean
         description: Publish to Appcenter
-      #secrets:
+      secrets:
       # APPCENTER_TOKEN_ANDROID:
       #   required: true
-      # ANDROID_KEYSTORE:
-      #   required: true
-      # ANDROID_KEY_ALIAS:
-      #   required: true
-      # ANDROID_KEYSTORE_PASSWORD:
-      #   required: true
+      ANDROID_KEYSTORE:
+        required: true
+      ANDROID_KEY_ALIAS:
+        required: true
+      ANDROID_KEYSTORE_PASSWORD:
+        required: true
 
 jobs:
   build-android:
