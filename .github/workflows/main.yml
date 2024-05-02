@@ -40,9 +40,10 @@ jobs:
   build-android:
     needs: install-and-test
     uses: ./.github/workflows/build-android.yml
+    with:
+      environment: release
     secrets: inherit
-    # with:
-    #   environment: release
+
 
   
   # # Third Job
