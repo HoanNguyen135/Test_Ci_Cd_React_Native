@@ -1,7 +1,6 @@
 {
-  "name": "Test_Ci_Cd_React_Native",
+  "name": "test_ci_cd_react_native",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -15,7 +14,8 @@
     "appcenter-analytics": "^5.0.1",
     "appcenter-crashes": "^5.0.1",
     "react": "18.2.0",
-    "react-native": "0.74.0"
+    "react-native": "0.74.0",
+    "socket.io-client": "^4.7.5"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -34,7 +34,12 @@
     "prettier": "2.8.8",
     "react-test-renderer": "18.2.0",
     "ts-jest": "^29.0.3",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "rn-mark-vision": "*",
+    "react-native-animation-story":"*",
+    "rn-react-native-story":"*",
+    "react-js-tag-audio":"*",
+    "rn-ani" :"*"
   },
   "engines": {
     "node": ">=18"
