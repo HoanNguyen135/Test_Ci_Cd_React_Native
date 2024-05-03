@@ -1,6 +1,21 @@
 {
   "name": "test_ci_cd_react_native",
   "version": "0.0.1",
+  "description": "A view animation story",
+  "main": "index.js",
+  "keywords": [
+    "react",
+    "native",
+    "CI/CD",
+    "github"
+  ],
+  "author": "HoanNguyen135",
+  "license": "MIT",
+  "homepage": "https://github.com/HoanNguyen135/Test_Ci_Cd_React_Native",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HoanNguyen135/Test_Ci_Cd_React_Native"
+  },
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
