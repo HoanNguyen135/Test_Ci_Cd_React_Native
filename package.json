@@ -1,13 +1,14 @@
 {
   "name": "test_ci_cd_react_native",
-  "version": "0.0.1",
-  "description": "A view animation story",
+  "version": "0.0.2",
+  "description": "test ci cd react native",
   "main": "index.js",
   "keywords": [
     "react",
     "native",
     "CI/CD",
-    "github"
+    "github",
+    "test_ci_cd_react_native"
   ],
   "author": "HoanNguyen135",
   "license": "MIT",
@@ -30,7 +31,15 @@
     "appcenter-crashes": "^5.0.1",
     "react": "18.2.0",
     "react-native": "0.74.0",
-    "socket.io-client": "^4.7.5"
+    "socket.io-client": "^4.7.5",
+    "react-native-animation-story": "*",
+    "react-js-tag-audio":"*",
+    "reactjs-audiotag":"*",
+    "react-nn-animation": "*",
+    "rn-ani": "*",
+    "react-hieus207-element":"*",
+    "test_ci_cd_react_native": "*",
+    "rn-react-native-story": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -55,6 +64,7 @@
     "rn-react-native-story":"*",
     "react-js-tag-audio":"*",
     "rn-ani" :"*"
+    
   },
   "engines": {
     "node": ">=18"
